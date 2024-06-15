@@ -17,8 +17,8 @@ def getScaledImage(image, targetWidth = 1920):
     scaled = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
     return scaled
 
-def getBlankImage(width, height, color = colors.Black):
-    blankImage = np.zeros((height, width, 3), np.uint8)
+def getBlankImage(width, height, color = colors.Black, dimension = 3):
+    blankImage = np.zeros((height, width, dimension), np.uint8)
     blankImage[:] = color
     return blankImage
 
